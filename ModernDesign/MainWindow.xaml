@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vModel = "clr-namespace:ModernDesign.MVVM.ViewModel"
         xmlns:local="clr-namespace:ModernDesign"
         mc:Ignorable="d"
         Height="600" Width="920"
@@ -10,6 +11,9 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
+    <Window.DataContext>
+        <vModel:MainViewModel/>
+    </Window.DataContext>
     <Border Background="#272537">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -24,21 +28,26 @@
 
             <TextBlock Text="CaseGuard"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="10,0,0,0"
                        Foreground="White"
-                       FontSize="22"/>
+                       FontSize="22"
+                       FontFamily="/Fonts/#Roboto"/>
 
             <StackPanel Grid.Row="1">
                 <RadioButton Content="Home"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="News"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"/>
+                <RadioButton Content="Discover"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding DiscoveryViewCommand}"/>
                 <RadioButton Content="Get Started"
                              Height="50"
                              Foreground="White"
@@ -52,6 +61,11 @@
                      Margin="5"
                      Grid.Column="1"
                      Style="{StaticResource ModernTextBox}"/>
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"
+                            />
         </Grid>
     </Border>
 </Window>

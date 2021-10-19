@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="ModernDesign.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ModernDesign.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <TextBlock Text="Home"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"/>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,10">
+            <Border Width="400"
+                    Height="200">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#1C3F5C" Offset="0.0"/>
+                        <GradientStop Color="#224F73" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,400,200"/>
+                </Border.Clip>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="What's New"
+                                   FontSize="28"
+                                   Margin="20,10,10,0"
+                                   Foreground="White"/>
+                        <TextBlock Text="Latest release"
+                                   FontSize="18"
+                                   Margin="20,10,10,0"
+                                   Foreground="White"/>
+                        <TextBlock Text="Cupcake ipsum dolor sit amet marshmallow bonbon cupcake. Gingerbread sugar plum cake muffin caramels jujubes. Pudding cotton candy jelly tiramisu halvah. Cheesecake jelly tootsie roll cotton candy donut tiramisu."
+                                   TextWrapping="Wrap"
+                                   FontSize="11"
+                                   Margin="20,10,10,0"
+                                   Foreground="White"/>
+                    </StackPanel>
+                    <Image Width="250"
+                           Height="250"/>
+                </Grid>
+
+            </Border>
+            <Border Width="200"
+                    Height="200"
+                    CornerRadius="10"
+                    Margin="50, 0, 0, 0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#1C3F5C" Offset="0.0"/>
+                        <GradientStop Color="#224F73" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <StackPanel>
+
+                        <TextBlock Text="Lorem Ipsum"
+                                   FontSize="18"
+                                   Margin="20,10,10,0"
+                                   Foreground="White"/>
+                        <TextBlock Text="Cupcake ipsum dolor sit amet. Pudding ice cream gummies gummies sweet roll."
+                                   TextWrapping="Wrap"
+                                   FontSize="11"
+                                   Margin="20,10,10,0"
+                                   Foreground="White"/>
+                    </StackPanel>
+                    <Image
+                           Source="/Images/birthday-cupcake.png" 
+                           Opacity=".25" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <StackPanel>
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="15,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="What's New"
+                       Foreground="White"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,20"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Border Width="150"
+                        Height="150"
+                        Background="#87B9E1"
+                        CornerRadius="10"
+                        Margin="0">
+                   
+                </Border>
+                <Border Width="150"
+                        Height="150"
+                        Background="#87B9E1"
+                        CornerRadius="10"/>
+                <Border Width="150"
+                        Height="150"
+                        Background="#87B9E1"
+                        CornerRadius="10"/>
+                <Border Width="150"
+                        Height="150"
+                        Background="#87B9E1"
+                        CornerRadius="10"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

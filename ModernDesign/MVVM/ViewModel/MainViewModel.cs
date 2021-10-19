@@ -14,14 +14,14 @@ namespace ModernDesign.MVVM.ViewModel
 
         public HomeViewModel HomeVM{ get; set; }
         public DiscoveryViewModel DiscoveryVM { get; set; }
-        private object _currentView;
+        private IViewModel _currentViewModel;
 
-        public object CurrentView
+        public IViewModel CurrentViewModel
         {
-            get { return _currentView; }
+            get { return _currentViewModel; }
             set
             {
-                _currentView = value;
+                _currentViewModel = value;
                 OnPropertyChanged();
             }
         }
@@ -30,16 +30,16 @@ namespace ModernDesign.MVVM.ViewModel
         {
             HomeVM = new HomeViewModel();
             DiscoveryVM = new DiscoveryViewModel();
-            CurrentView = HomeVM;
+            CurrentViewModel = HomeVM;
 
             HomeViewCommand = new RelayCommand(o => 
             {
-                CurrentView = HomeVM;
+                CurrentViewModel = HomeVM;
             });
 
             DiscoveryViewCommand = new RelayCommand(o =>
             {
-                CurrentView = DiscoveryVM;
+                CurrentViewModel = DiscoveryVM;
             });
         }
     }

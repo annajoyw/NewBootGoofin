@@ -25,16 +25,17 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-
+            <Border Background="#22202f" Grid.Row="0"/>
             <TextBlock Text="CaseGuard"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Margin="10,0,0,0"
                        Foreground="White"
                        FontSize="22"
-                       FontFamily="/Fonts/#Roboto"/>
+                       FontFamily="/Fonts/#Roboto" />
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Background="#22202f">
+                
                 <RadioButton Content="Home"
                              Height="50"
                              Foreground="White"

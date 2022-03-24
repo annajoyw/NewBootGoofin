@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ModernDesign.Commands;
+using ModernDesign.MVVM.View;
+using ModernDesign.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,13 @@ namespace ModernDesign
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainViewModel();
+        }
+
+        private void RadioButton1_Click(object sender, RoutedEventArgs e)
+        {
+            var myControl = (HomeView)this.XContent;
+            myControl.TextB.Text = "click";
         }
     }
 }

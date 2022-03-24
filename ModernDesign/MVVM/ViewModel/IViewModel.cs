@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModernDesign.MVVM.ViewModel
 {
-    interface IViewModel
+    public interface IViewModel
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModernDesign.MVVM.ViewModel
 {
-    class RegisterViewModel : IViewModel
+    public class RegisterViewModel : IViewModel
     {
     }
 }
